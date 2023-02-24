@@ -1,3 +1,33 @@
+@keyframes slideInTop {
+    from {
+        transform: translateY(-70px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .trending-animation {
+      animation: slideInTop 0.6s 1;
+    }
+}
+
 body {
     background-color: #E8F1F2;
     font-family: 'Alexandria', sans-serif;
@@ -5,60 +35,65 @@ body {
 
 .column {
     float: center;
-    width: 33.33%;
+    width: 100%;
 }
 
-.square {
-    background-color: #ff6347;
-    width: 70%;
-    height: 40px;
-    border-radius: 15px;
-    position: relative;
-    left: 15%;
-}
-
-.hello {
-    color: white;
-    text-align: center;
-    letter-spacing: 2px;
-    position: relative;
-    top: 10px;
-}
-
-.link-hello {
-    text-decoration: none;
-    color: white;
-}
-
-.column {
-    display: contents;
-}
 
 .column img {
     width: 90%;
     height: auto;
-    border-radius: 15px;
-    margin: auto;
-    display: block;
-    transform: translateY(10px);
+    border-radius: 100px;
+    position: relative;
+    top: 30px;
+    left: 70px;
+    overflow: hidden;
+    animation-name: fadeIn;
+    animation-duration: 0.6s;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+}
+
+.c-announce-event {
+    transform: translate(905px, -150px);
+    color: #E8F1F2;
+    font-size: 190%;
+}
+
+.c-announce-place {
+    transform: translate(840px, -180px);
+    color: #E8F1F2;
+    font-weight: 300;
 }
 
 .c-boletos {
-    height: 25px;
-    width: 100px;
+    height: 45px;
+    width: 170px;
     position: relative;
     margin-top: 200px;
     border-radius: 15px;
     border: none;
     color: #E8F1F2;
     background-color: #090300;
+    font-size: 150%;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    left: 950px;
+    top: -390px;
+    animation: fadeIn 0.6s ease-in 1s backwards;
 }
 
 .nav-bar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    position: relative;
+    top: 35px;
+    left: 100px;
+    animation-name: slideInTop;
+    animation-duration: 0.6s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
 }
 
 li {
@@ -71,4 +106,195 @@ li {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-size:130%;
+    font-weight: 600;
+}
+
+.nav-ayuda{
+    font-weight: 300;
+    transform: translateX(370px);
+}
+
+.nav-bar img{
+    display: inline;
+    width: 120px;
+    position: relative;
+    top: 4px;
+    left: 0px;
+    animation-name: slideInTop;
+    animation-duration: 0.6s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+
+.nav-searchbar input{
+    width: 300px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    background-color: #090300;
+    color: #E8F1F2;
+    font-size: large;
+    font-weight: 400;
+    position: relative;
+    top: 40px;
+    left: 40px;
+    padding-left: 15px;
+    animation-name: slideInTop;
+    animation-duration: 0.6s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+
+.nav-searchbar input::placeholder{
+    color: #E8F1F2;
+    animation: fadeIn 0.6s ease-in 1s;
+}
+
+.nav-searchbar button{
+    width: 35px;
+    height: 35px;
+    background-color: #090300;
+    color: #E8F1F2;
+    border: none;
+    font-size: medium;
+    position: relative;
+    top: 40px;
+    left: -10px;
+    cursor: pointer;
+    animation-name: slideInTop;
+    animation-duration: 0.6s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+
+.nav-login button {
+    height: 35px;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    background-color: #0000CC;
+    color: #E8F1F2;
+    font-weight: 700;
+    font-size: larger;
+    position: relative;
+    top: 5px;
+    left: 490px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    animation-name: slideInTop;
+    animation-duration: 0.6s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+
+.trending {
+    transform: translateY(-37%);
+    width:1425px;
+    height: 800px;
+    background-color: #090300;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    z-index: -1;
+}
+
+.trending-title{
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    color: #E8F1F2;
+    text-align: center;
+    position: relative;
+    top: 25px;
+    font-size: 150%;
+    font-weight: bolder;
+}
+
+.item-1 {
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+.item-1 img {
+    width: 400px;
+    border-radius: 30px;
+    position: relative;
+    top: 25%;
+    left: 37px;
+    box-shadow: 0 4px 8px 10px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+}
+
+.item-1 img:hover {
+    transform: scale(1.1);
+}
+
+.item-2{
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    
+}
+
+.item-2 img {
+    width: 400px;
+    border-radius: 30px;
+    position: relative;
+    top: 25%;
+    left: 37px;
+    box-shadow: 0 4px 8px 10px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+}
+
+.item-2 img:hover {
+    transform: scale(1.1);
+}
+
+.item-3{
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 3;
+    grid-column-end: 3;
+}
+
+.item-3 img {
+    width: 400px;
+    border-radius: 30px;
+    position: relative;
+    top: 25%;
+    left: 37px;
+    box-shadow: 0 4px 8px 10px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+}
+
+.item-3 img:hover {
+    transform: scale(1.1);
+}
+
+.square-blue{
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: #0000CC;
+    width: 1425px;
+    height: 250px;
+    position: relative;
+    top: 35%;
 }
