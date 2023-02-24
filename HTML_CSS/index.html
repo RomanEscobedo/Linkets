@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,16 +9,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/27f4bcc322.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </head>
 <body>
-    <div class="nav-bar">
-        <img src="./images/logo.png" alt="">
+    <div class="container nav-bar">
         <ul>
+            <li><img src="./images/logo.png" alt="linkets logo"></li>
             <li><a href="#">Conciertos y festivales</a></li>
             <li><a href="#">Deportes</a></li>
-            <li><a href="#">Mas</a></li>
-            <li><a href="#">Ayuda</a></li>
+            <li><a href="#">Más</a></li>
+            <li><a href="#" class="nav-ayuda">Ayuda</a></li>
         </ul>
+        <div class="nav-searchbar">
+            <input type="text" placeholder="Eventos, artistas, lugar, etc...">
+            <button class="fa-solid fa-magnifying-glass"></button>
+        </div>
+        <div class="nav-login">
+            <button>Iniciar sesión</button>
+        </div>
     </div>
 
     <div class="column">
@@ -26,8 +35,29 @@
             <img src="./images/edcm_2023_mk_an_fest_site_dh_3200x1520_r03-scaled.jpg">
         </div>
         </div class="c-button">
+            <h2 class="c-announce-event">EDC México 2023</h2>
+            <h2 class="c-announce-place">Autodromo Hermanos Rodriguez</h2>
             <button class="c-boletos"> Ver boletos </button>
+        </div>
+    </div>
+
+    <div class="container trending">
+        <div class="item trending-title">
+            <div class="trending-animate t-wrapper">
+            <h1>Trending</h1>
+            </div>
+        </div>
+        <div class="item square-blue"></div>
+        <div class="item item-1">
+            <img src="./images/91UUbDedB1S._AC_SL1500_.jpg">
+        </div>
+        <div class="item item-2">
+            <img src="./images/ab67616d0000b2734ab2520c2c77a1d66b9ee21d.jpeg">
+        </div>
+        <div class="item item-3">
+            <img src="./images/Sam-Smith-Gloria.jpg.webp">           
         </div>
     </div>
 </body>
 </html>
+ 
